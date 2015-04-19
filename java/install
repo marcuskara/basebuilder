@@ -19,7 +19,8 @@ apt-get install -y tomcat7 maven
 echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
 
 # Configure timezone and locale
-RUN echo "Europe/Amsterdam" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
+echo "Europe/Amsterdam" > /etc/timezone 
+dpkg-reconfigure -f noninteractive tzdata
 
 rm -rf /var/lib/tomcat7/webapps
 ln -s /home/application/current /var/lib/tomcat7/webapps
