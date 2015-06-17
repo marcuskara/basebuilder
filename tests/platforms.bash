@@ -1,5 +1,9 @@
 #!/bin/bash -el
 
+# Copyright 2015 basebuilder authors. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
 function add_platform() {
 	platform=$1
 	echo "adding platform $platform..."
@@ -96,7 +100,7 @@ set -e
 clone_basebuilder /tmp/basebuilder
 echo -e "Host localhost\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-platforms="java nodejs php python python3 ruby static cordova play"
+platforms="java nodejs php python python3 ruby static cordova play iojs go"
 
 for platform in $platforms
 do

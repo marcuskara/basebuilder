@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+
+# Copyright 2015 basebuilder authors. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
 import os
 import shutil
 import subprocess
@@ -74,7 +79,7 @@ class FPM54(Interpretor):
 
     def pre_install(self):
         os.system('apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A2098A6E')
-        os.system('echo deb http://php53.dotdeb.org stable all | tee /etc/apt/sources.list.d/php54.list')
+        os.system('echo deb http://packages.dotdeb.org stable all | tee /etc/apt/sources.list.d/php54.list')
         os.system('apt-get update')
         self.phpversion = subprocess.check_output('apt-cache madison php5|grep 5.4|awk \'{print "="$3}\'', shell=True)
 
@@ -176,7 +181,7 @@ class HHVM(Interpretor):
         pass
 
     def get_startup_cmd(self):
-        return '/usr/bin/hhvm --config /etc/hhvm/php.ini --config /etc/hhvm/server.ini --user %s --mode daemon -vPidFile=/var/run/hhvm/pid' % self.application.get('user')
+        return '/usr/bin/hhvm --config /etc/hhvm/php.ini --config /etc/hhvm/server.ini --user %s --mode server -vPidFile=/var/run/hhvm/pid' % self.application.get('user')
 
 interpretors = {
     'fpm54': FPM54,
