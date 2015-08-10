@@ -2,9 +2,9 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-# this file describes how to build tsuru java image
+# this file describes how to build tsuru grails image
 # to run it:
-# 1- run: $ tsuru-admin platform-add java -d https://raw.github.com/tsuru/basebuilder/master/java/Dockerfile
+# 1- run: $ tsuru-admin platform-add grails -d https://raw.github.com/tsuru/basebuilder/master/grails/Dockerfile
 
 from	ubuntu:14.04
 run     locale-gen en_US.UTF-8
@@ -15,6 +15,6 @@ run	wget http://github.com/marcuskara/basebuilder/tarball/master -O basebuilder.
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run	rm basebuilder.tar.gz
-run	cp /var/lib/tsuru/java/deploy /var/lib/tsuru
-run	cp /var/lib/tsuru/java/start /var/lib/tsuru
-run	/var/lib/tsuru/java/install
+run	cp /var/lib/tsuru/grails/deploy /var/lib/tsuru
+run	cp /var/lib/tsuru/grails/start /var/lib/tsuru
+run	/var/lib/tsuru/grails/install
