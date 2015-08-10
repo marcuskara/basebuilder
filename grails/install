@@ -17,9 +17,10 @@ apt-get install -y software-properties-common haveged
 add-apt-repository -y ppa:webupd8team/java
 apt-get update
 apt-get install -y --force-yes oracle-java8-installer
-apt-get install -y --force-yes oracle-java7-installer
+#apt-get install -y --force-yes oracle-java7-installer
 
 # Install Grails
+echo "Installing Grails"
 echo "gvm_auto_answer=true" >> ~/.gvm/etc/config
 
 curl -s get.gvmtool.net | bash
