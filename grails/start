@@ -6,11 +6,8 @@
 
 source /var/lib/tsuru/config
 
-TSURU_JAVA_VERSION=${JAVA_VERSION-7}
+TSURU_JAVA_VERSION=${JAVA_VERSION-8}
 case $TSURU_JAVA_VERSION in
-7)
-	java_to_use="java-7-oracle"
-	;;
 8)
 	java_to_use="java-8-oracle"
 	;;
