@@ -7,5 +7,5 @@
 XMX=${JAVA_MAX_MEMORY-256}
 MAXPERM=${JAVA_MAX_PERM-128}
 
-cd ~/current
+cd /home/application/current
 grails run-app
