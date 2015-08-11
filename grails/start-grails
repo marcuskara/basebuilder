@@ -8,4 +8,4 @@ XMX=${JAVA_MAX_MEMORY-256}
 MAXPERM=${JAVA_MAX_PERM-128}
 
 cd /home/application/current
-grails --non-interactive -Dserver.port=8888 -Denable.jndi=true -Ddisable.auto.recompile=true -Dgrails.env=production run-app
+grails --non-interactive -Dserver.host=0.0.0.0 -Dserver.port=8888 -Denable.jndi=true -Ddisable.auto.recompile=true -Dgrails.env=production run-app
