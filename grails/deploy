@@ -6,3 +6,6 @@
 
 SOURCE_DIR=/var/lib/tsuru
 source ${SOURCE_DIR}/base/deploy
+
+cd /home/application/current
+grails clean compile
