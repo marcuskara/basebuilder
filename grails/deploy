@@ -8,5 +8,5 @@ SOURCE_DIR=/var/lib/tsuru
 source ${SOURCE_DIR}/base/deploy
 
 cd /home/application/current
-grails --non-interactive clean
-grails --non-interactive compile
+grails clean
+grails compile
