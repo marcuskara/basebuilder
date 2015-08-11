@@ -23,6 +23,8 @@ apt-get install -y --force-yes oracle-java8-installer
 echo "Installing GVM"
 curl -s get.gvmtool.net | bash
 echo "gvm_auto_answer=true" >> ~/.gvm/etc/config
+source "/home/ubuntu/.gvm/bin/gvm-init.sh"
+
 echo "Installing Grails"
 gvm install grails
 
