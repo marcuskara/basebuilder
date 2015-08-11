@@ -12,8 +12,8 @@ case $TSURU_JAVA_VERSION in
 	java_to_use="java-8-oracle"
 	;;
 *)
-	echo "WARNING: invalid Java version, please use \"7\" or \"8\". Using Java 7 as fallback."
-	java_to_use="java-7-oracle"
+	echo "WARNING: invalid Java version, please use \"8\". Using Java 8 as fallback."
+	java_to_use="java-8-oracle"
 	;;
 esac
 
