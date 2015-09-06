@@ -1,1 +1,1 @@
-grails: /var/lib/tsuru/grails/start-grails
+web: /var/lib/tsuru/grails/start-grails
