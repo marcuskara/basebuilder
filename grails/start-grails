@@ -8,4 +8,5 @@ XMX=${JAVA_MAX_MEMORY-256}
 MAXPERM=${JAVA_MAX_PERM-128}
 
 cd /home/application/current
-grails run-app
+grails prod run-app  --non-interactive --host=0.0.0.0 --port=${PORT}
+
