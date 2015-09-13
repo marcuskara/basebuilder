@@ -49,14 +49,14 @@ class Manager(object):
             self.interpretor.post_install()
 
         # If there's no Procfile, create it
-        Procfile_path = os.path.join(self.application.get('directory'), 'Procfile')
-        if not os.path.isfile(Procfile_path):
-            f = open(Procfile_path, 'w')
-            f.write('web: %s\n' % self.frontend.get_startup_cmd())
-            if self.interpretor is not None:
-                f.write('interpretor: %s\n' % self.interpretor.get_startup_cmd())
+        #Procfile_path = os.path.join(self.application.get('directory'), 'Procfile')
+        #if not os.path.isfile(Procfile_path):
+        f = open('/var/lib/tsuru/php/start-php', 'a')
+        f.write('sudo %s\n' % self.frontend.get_startup_cmd())
+        if self.interpretor is not None:
+            f.write('sudo %s\n' % self.interpretor.get_startup_cmd())
 
-            f.close()
+        f.close()
 
         if self.configuration.get('composer', True):
             self.install_composer()
