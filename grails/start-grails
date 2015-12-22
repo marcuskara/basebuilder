@@ -8,5 +8,5 @@ XMX=${JAVA_MAX_MEMORY-256}
 MAXPERM=${JAVA_MAX_PERM-128}
 
 cd /home/application/current
-grails prod run-app  --non-interactive --host=0.0.0.0 --port=${PORT}
+java -Dgrails.env=prod -jar build/libs/current-${GRAILS_APP_VERSION}.jar --server.host=0.0.0.0 --server.port=${PORT}
 sleep 10

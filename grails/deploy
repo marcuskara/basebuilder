@@ -9,4 +9,5 @@ source ${SOURCE_DIR}/base/deploy
 
 cd /home/application/current
 grails clean
-grails compile
+grails package
+GRAILS_APP_VERSION=`gradle -q properties | grep version: | cut -d' ' -f2`
