@@ -27,7 +27,7 @@ echo "JAVA_HOME=/usr/lib/jvm/$java_to_use" > /home/ubuntu/.ssh/environment
 
 TSURU_GRAILS_VERSION=${GRAILS_VERSION}
 if [ -n "$TSURU_GRAILS_VERSION" ]; then
-  gvm install grails $TSURU_GRAILS_VERSION
-  gvm default grails $TSURU_GRAILS_VERSION
+  sdk install grails $TSURU_GRAILS_VERSION
+  sdk default grails $TSURU_GRAILS_VERSION
 fi
 /var/lib/tsuru/base/start
