@@ -25,13 +25,14 @@ curl -s get.gvmtool.net | bash
 echo "gvm_auto_answer=true" >> ~/.gvm/etc/config
 source "/home/ubuntu/.gvm/bin/gvm-init.sh"
 
-echo "Installing Grails"
+echo "Installing Gradle & Grails"
+gvm install gradle
 gvm install grails
 
 echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
 
 # Configure timezone and locale
-echo "Europe/Amsterdam" > /etc/timezone 
+echo "Europe/Amsterdam" > /etc/timezone
 dpkg-reconfigure -f noninteractive tzdata
 
 #sed -i 's/8080/8888/' /etc/tomcat7/server.xml
