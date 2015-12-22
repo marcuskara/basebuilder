@@ -9,4 +9,4 @@ source ${SOURCE_DIR}/base/deploy
 
 cd /home/application/current
 grails clean
-grails compile
+grails package
