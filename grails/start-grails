@@ -6,7 +6,8 @@
 
 XMX=${JAVA_MAX_MEMORY-256}
 MAXPERM=${JAVA_MAX_PERM-128}
+JAVA_AGENT=${JAVA_AGENT}
 
 cd /home/application/current/build/libs
-java -Dgrails.env=prod -jar current-${GRAILS_APP_VERSION}.war -XX:MaxPermSize=${MAXPERM}m -Xmx${XMX}m --server.host=0.0.0.0 --server.port=${PORT}
+java -Dgrails.env=prod -jar current-${GRAILS_APP_VERSION}.war -XX:MaxPermSize=${MAXPERM}m -Xmx${XMX}m ${JAVA_AGENT} --server.host=0.0.0.0 --server.port=${PORT}
 sleep 10
