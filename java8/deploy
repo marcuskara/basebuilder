@@ -23,3 +23,6 @@ esac
 sudo update-java-alternatives -s $java_to_use > /dev/null
 sed -i "s;export JAVA_HOME.*;export JAVA_HOME=/usr/lib/jvm/$java_to_use;" /home/ubuntu/.profile
 sed -i "s;#JAVA_HOME#;export JAVA_HOME=/usr/lib/jvm/$java_to_use;" /home/ubuntu/.profile
+
+cd /home/application/current
+./gradlew stage
