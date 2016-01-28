@@ -1,1 +1,1 @@
-web: /var/lib/tsuru/java8/start-maven
+web: /var/lib/tsuru/java8/start-jar
