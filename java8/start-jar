@@ -8,5 +8,5 @@ XMX=${JAVA_MAX_MEMORY-128}
 MAXPERM=${JAVA_MAX_PERM-128}
 
 cd /home/application/current
-
-mvn clean package jetty:run
+java -XX:MaxPermSize=${MAXPERM}m -Xmx${XMX}m -jar tsuru-app.jar -Dserver.host=0.0.0.0 -Dserver.port=${PORT}
+sleep 10
