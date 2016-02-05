@@ -29,6 +29,9 @@ echo "Installing Gradle & Grails"
 sdk install gradle
 sdk install grails
 
+# sdkman permissions
+chmod 777 -R "/home/ubuntu/.sdkman/"
+
 echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
 
 # Configure timezone and locale
