@@ -10,4 +10,4 @@ source ${SOURCE_DIR}/base/deploy
 cd /home/application/current
 grails clean
 grails package
-export GRAILS_APP_VERSION=`gradle -q properties | grep version: | cut -d' ' -f2`
+#export GRAILS_APP_VERSION=`gradle -q properties | grep version: | cut -d' ' -f2`
