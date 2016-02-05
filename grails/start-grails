@@ -8,6 +8,5 @@ XMX=${JAVA_MAX_MEMORY-256}
 JAVA_AGENT=${JAVA_AGENT}
 
 cd /home/application/current/build/libs
-export GRAILS_APP_VERSION=`gradle -q properties | grep version: | cut -d' ' -f2`
 java -Dgrails.env=prod -Xmx${XMX}m ${JAVA_AGENT} -jar current-${GRAILS_APP_VERSION}.war --server.host=0.0.0.0 --server.port=${PORT}
 sleep 10
