@@ -30,6 +30,7 @@ sdk install gradle
 sdk install grails
 
 # sdkman permissions
+chown ubuntu:ubuntu -R "/home/ubuntu/.sdkman/"
 chmod 777 -R "/home/ubuntu/.sdkman/"
 
 echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
