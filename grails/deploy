@@ -7,7 +7,13 @@
 SOURCE_DIR=/var/lib/tsuru
 source ${SOURCE_DIR}/base/deploy
 
+TSURU_GRAILS_VERSION=${GRAILS_VERSION}
+if [ -n "$TSURU_GRAILS_VERSION" ]; then
+  sdk install grails $TSURU_GRAILS_VERSION
+  sdk default grails $TSURU_GRAILS_VERSION
+fi
+
 cd /home/application/current
 grails clean
 grails package
-#export GRAILS_APP_VERSION=`gradle -q properties | grep version: | cut -d' ' -f2`
+export GRAILS_APP_VERSION=`gradle -q properties | grep version: | cut -d' ' -f2`
