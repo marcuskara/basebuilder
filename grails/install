@@ -23,6 +23,8 @@ apt-get install -y --force-yes oracle-java8-installer
 echo "Installing sdkman"
 curl -s get.sdkman.io | bash
 echo "sdkman_auto_answer=true" >> ~/.sdkman/etc/config
+echo "sdkman_auto_selfupdate=false" >> ~/.sdkman/etc/config
+echo "sdkman_insecure_ssl=false" >> ~/.sdkmanetc/config
 source "/home/ubuntu/.sdkman/bin/sdkman-init.sh"
 
 echo "Installing Gradle & Grails"
