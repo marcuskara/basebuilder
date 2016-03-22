@@ -24,7 +24,7 @@ echo "Installing sdkman"
 curl -s get.sdkman.io | bash
 echo "sdkman_auto_answer=true" >> ~/.sdkman/etc/config
 echo "sdkman_auto_selfupdate=false" >> ~/.sdkman/etc/config
-echo "sdkman_insecure_ssl=false" >> ~/.sdkmanetc/config
+echo "sdkman_insecure_ssl=false" >> ~/.sdkman/etc/config
 source "/home/ubuntu/.sdkman/bin/sdkman-init.sh"
 
 echo "Installing Gradle & Grails"
