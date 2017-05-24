@@ -5,8 +5,8 @@
 # license that can be found in the LICENSE file.
 
 XMX=${JAVA_MAX_MEMORY-128}
-MAXPERM=${JAVA_MAX_PERM-128}
+TSURU_JAVA_OPTS=${TSURU_JAVA_OPTS}
 
 cd /home/application/current
-java -XX:MaxPermSize=${MAXPERM}m -Xmx${XMX}m -jar tsuru-app.jar -Dserver.host=0.0.0.0 -Dserver.port=${PORT}
+java -Dserver.host=0.0.0.0 -Dserver.port=${PORT} ${TSURU_JAVA_OPTS} -Xmx${XMX}m -jar tsuru-app.jar
 sleep 10
